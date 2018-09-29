@@ -1,16 +1,21 @@
-// Flip
+.card_scene {
+  width: 180px;
+  height: 234px;
+  //margin: 10px 5px;
+  //perspective: 600px;
+  //float:left;
+}
 
 .flipcard {
-  //height: 100%;
-  transition: transform 1s;
+  height: 100%;
+  transition: transform 0.5s;
   transform-style: preserve-3d;
-  //cursor: pointer;
-  //position: relative;
-  //width: 100%;
+  cursor: pointer;
+  position: relative;
 }
 
 .flipcard.is-flipped {
-  transform: rotateY(180deg);
+  transform: rotateX(180deg);
 }
 
 .flipcard.is-flipped .card__face {
@@ -21,36 +26,39 @@
 }
 
 .card__face {
-  //position: absolute;
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
   //line-height: 234px;
   backface-visibility: hidden;
 }
 .card__face-back {
   position: absolute;
-  //line-height: 292px;
+  max-width: 100%;
+  max-height: 100%;
+  //line-height: 234px;
   backface-visibility: hidden;
 }
 
 
+
 .card__face--front {
-  transform: rotateY(0deg);
+  transform: rotateX(0deg);
 }
 
 .card__face--back {
-  //background: white;
-  transform: rotateY(-180deg);
-  //border: 1px solid #CCC;
+  transform: rotateX(-180deg);
   width: 100%;
 }
 
 .cardtext {
   margin: 6px;
   font-size:14px;
-  line-height: 1.2em;
+  //line-height: 1.2em;
   display: inline-block;
   width: 100%;
-  white-space: pre;
-  color: white;
+  //white-space: pre;
+  color: black;
 }
 
 .flipcard-breakfloat {

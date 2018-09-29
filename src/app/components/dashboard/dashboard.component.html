@@ -1,247 +1,132 @@
-<mat-card>
-  <mat-card-content class="mt-4">
-    <div fxLayout="row wrap">
-      <div fxFlex.gt-sm="25" fxFlex.gt-xs="50" fxFlex="100">
-        <mat-card class="card-widget mat-teal">
-          <div mat-card-widget>
-            <div mat-card-float-icon>
-              <mat-icon>local_offer</mat-icon>
-            </div>
-            <div class="pl-0">
-              <h2 mat-card-widget-title>103</h2>
-              <p>Campaigns</p>
-            </div>
-          </div>
-        </mat-card>
-      </div>
-      <div fxFlex.gt-sm="25" fxFlex.gt-xs="50" fxFlex="100">
-        <mat-card class="card-widget mat-purple">
-          <div mat-card-widget>
-            <div mat-card-float-icon>
-              <mat-icon>phone</mat-icon>
-            </div>
-            <div class="pl-0">
-              <h2 mat-card-widget-title>230</h2>
-              <p>Customers</p>
-            </div>
-          </div>
-        </mat-card>
-      </div>
-      <div fxFlex.gt-sm="25" fxFlex.gt-xs="50" fxFlex="100">
-        <mat-card class="card-widget mat-red">
-          <div mat-card-widget>
-            <div mat-card-float-icon>
-              <mat-icon>notifications</mat-icon>
-            </div>
-            <div class="pl-0">
-              <h2 mat-card-widget-title>323</h2>
-              <p>Queries</p>
-            </div>
-          </div>
-        </mat-card>
-      </div>
-      <div fxFlex.gt-sm="25" fxFlex.gt-xs="50" fxFlex="100">
-        <mat-card class="card-widget mat-indigo">
-          <div mat-card-widget>
-            <div mat-card-float-icon>
-              <mat-icon>email</mat-icon>
-            </div>
-            <div class="pl-0">
-              <h2 mat-card-widget-title>870</h2>
-              <p>Opens</p>
-            </div>
-          </div>
-        </mat-card>
-      </div>
-    </div>
-  </mat-card-content>
-</mat-card>
-
 <div fxLayout="row wrap">
-  <div fxFlex.gt-sm="33.33%" fxFlex="100">
-    <mat-card>
+  <div fxFlex.gt-sm="33.33%" fxFlex.gt-xs="50" fxFlex="100">
+    <div>
       <div class="flipcard" #flipcard>
-        <div class="card__face card__face--front" #cardFace>
-          <mat-card-subtitle fxLayout="row" fxLayoutAlign="start center">
-            Revenue &nbsp; <span class="font-weight-bold mat-text-primary">+458,90</span>
-            <span fxFlex></span>
-            <button mat-icon-button mat-button-sm [matMenuTriggerFor]="card1" aria-label="Open card menu">
-              <mat-icon>more_vert</mat-icon>
-            </button>
-          </mat-card-subtitle>
-          <mat-menu #card1="matMenu" x-position="before">
-            <button mat-menu-item (click)="flipTheSpace()">
-              <mat-icon>settings</mat-icon>
-              Settings
-            </button>
-            <button mat-menu-item>
-              <mat-icon>more</mat-icon>
-              View More
-            </button>
-            <button mat-menu-item>
-              <mat-icon>notifications_off</mat-icon>
-              Disable notifications
-            </button>
-            <button mat-menu-item>
-              <mat-icon>exit_to_app</mat-icon>
-              Remove Panel
-            </button>
-          </mat-menu>
-          <mat-card-content>
-            <canvas height="200" baseChart class="chart"
-                    [datasets]="barChartData"
-                    [labels]="barChartLabels"
-                    [options]="barChartOptions"
-                    [colors]="chartColors"
-                    [legend]="barChartLegend"
-                    [chartType]="barChartType"></canvas>
-          </mat-card-content>
+        <div class="card__face card__face--front">
+          <mat-card>
+            <div fxLayout="row" fxLayoutAlign="center center" class="mr-1">
+              <mat-card-header class="mt-0">
+                <mat-card-subtitle>Revenue &nbsp; <span class="font-weight-bold mat-text-primary">+458,90</span></mat-card-subtitle>
+                <mat-card-title>Gerald Morris</mat-card-title>
+              </mat-card-header>
+              <span fxFlex></span>
+              <button mat-icon-button mat-button-sm (click)="flip(0)">
+                <mat-icon>more_vert</mat-icon>
+              </button>
+            </div>
+            <mat-card-content>
+              <button mat-fab mat-fab-card-float class="mr-1" color="warn"><mat-icon>share</mat-icon></button>
+              <p class="ma-0">Phileas Fogg and Aouda went on board, where they found Fix already installed. Below deck was a square cabin, of which the walls bulged out in the form of cots, above a circular divan; in the centre was a table provided with a swinging lamp.</p>
+            </mat-card-content>
+            <hr>
+            <mat-card-actions>
+              <div fxLayout="row">
+                <button mat-icon-button>
+                  <mat-icon>share</mat-icon>
+                </button>
+                <button mat-icon-button>
+                  <mat-icon>favorite</mat-icon>
+                </button>
+                <span fxFlex></span>
+                <button mat-button>More info</button>
+                <button mat-button>Download</button>
+              </div>
+            </mat-card-actions>
+          </mat-card>
         </div>
         <div class="card__face-back card__face--back">
           <mat-card>
-            <mat-card-title>
-              <!--<span fxFlex></span>-->
-              <button class="float-right"
-                      mat-icon-button
-                      mat-button-sm
-                      [matMenuTriggerFor]="card1"
-                      aria-label="Open card menu">
+            <div fxLayout="row" fxLayoutAlign="center center" class="mr-1">
+              <mat-card-header class="mt-0">
+                <mat-card-subtitle>Revenue &nbsp; <span class="font-weight-bold mat-text-primary">+458,90</span></mat-card-subtitle>
+                <mat-card-title>Gerald Morris</mat-card-title>
+              </mat-card-header>
+              <span fxFlex></span>
+              <button mat-icon-button mat-button-sm (click)="flip(0)">
                 <mat-icon>more_vert</mat-icon>
               </button>
-              <mat-menu #card1="matMenu" x-position="before">
-                <button mat-menu-item (click)="flipTheSpace()">
-                  <mat-icon>settings</mat-icon>
-                  Settings
-                </button>
-                <button mat-menu-item>
-                  <mat-icon>more</mat-icon>
-                  View More
-                </button>
-                <button mat-menu-item>
-                  <mat-icon>notifications_off</mat-icon>
-                  Disable notifications
-                </button>
-                <button mat-menu-item>
-                  <mat-icon>exit_to_app</mat-icon>
-                  Remove Panel
-                </button>
-              </mat-menu>
-            </mat-card-title>
-            <mat-card-content>
-              <div class="row">
-                <div class="col-lg-12">A</div>
-                <div class="col-lg-12">B</div>
-                <div class="col-lg-12">C</div>
-              </div>
+            </div>
+            <mat-card-content >
+              <button mat-fab mat-fab-card-float class="mr-1" color="warn"><mat-icon>share</mat-icon></button>
+              <p class="ma-0">Phileas Fogg and Aouda went on board, where they found Fix already installed. Below deck was a square cabin, of which the walls bulged out in the form of cots, above a circular divan; in the centre was a table provided with a swinging lamp.</p>
+              <p class="ma-0">Phileas Fogg and Aouda went on board, where they found Fix already installed. Below deck was a square cabin, of which the walls bulged out in the form of cots, above a circular divan; in the centre was a table provided with a swinging lamp.</p>
+              <p class="ma-0">Phileas Fogg and Aouda went on board, where they found Fix already installed. Below deck was a square cabin, of which the walls bulged out in the form of cots, above a circular divan; in the centre was a table provided with a swinging lamp.</p>
+              <p class="ma-0">Phileas Fogg and Aouda went on board, where they found Fix already installed. Below deck was a square cabin, of which the walls bulged out in the form of cots, above a circular divan; in the centre was a table provided with a swinging lamp.</p>
+              <p class="ma-0">Phileas Fogg and Aouda went on board, where they found Fix already installed. Below deck was a square cabin, of which the walls bulged out in the form of cots, above a circular divan; in the centre was a table provided with a swinging lamp.</p>
+              <p class="ma-0">Phileas Fogg and Aouda went on board, where they found Fix already installed. Below deck was a square cabin, of which the walls bulged out in the form of cots, above a circular divan; in the centre was a table provided with a swinging lamp.</p>
+              <p class="ma-0">Phileas Fogg and Aouda went on board, where they found Fix already installed. Below deck was a square cabin, of which the walls bulged out in the form of cots, above a circular divan; in the centre was a table provided with a swinging lamp.</p>
+              <p class="ma-0">Phileas Fogg and Aouda went on board, where they found Fix already installed. Below deck was a square cabin, of which the walls bulged out in the form of cots, above a circular divan; in the centre was a table provided with a swinging lamp.</p>
+              <p class="ma-0">Phileas Fogg and Aouda went on board, where they found Fix already installed. Below deck was a square cabin, of which the walls bulged out in the form of cots, above a circular divan; in the centre was a table provided with a swinging lamp.</p>
+              <p class="ma-0">Phileas Fogg and Aouda went on board, where they found Fix already installed. Below deck was a square cabin, of which the walls bulged out in the form of cots, above a circular divan; in the centre was a table provided with a swinging lamp.</p>
+              <p class="ma-0">Phileas Fogg and Aouda went on board, where they found Fix already installed. Below deck was a square cabin, of which the walls bulged out in the form of cots, above a circular divan; in the centre was a table provided with a swinging lamp.</p>
+              <p class="ma-0">Phileas Fogg and Aouda went on board, where they found Fix already installed. Below deck was a square cabin, of which the walls bulged out in the form of cots, above a circular divan; in the centre was a table provided with a swinging lamp.</p>
+              <p class="ma-0">Phileas Fogg and Aouda went on board, where they found Fix already installed. Below deck was a square cabin, of which the walls bulged out in the form of cots, above a circular divan; in the centre was a table provided with a swinging lamp.</p>
+              <p class="ma-0">Phileas Fogg and Aouda went on board, where they found Fix already installed. Below deck was a square cabin, of which the walls bulged out in the form of cots, above a circular divan; in the centre was a table provided with a swinging lamp.</p>
+              <p class="ma-0">Phileas Fogg and Aouda went on board, where they found Fix already installed. Below deck was a square cabin, of which the walls bulged out in the form of cots, above a circular divan; in the centre was a table provided with a swinging lamp.</p>
+              <p class="ma-0">Phileas Fogg and Aouda went on board, where they found Fix already installed. Below deck was a square cabin, of which the walls bulged out in the form of cots, above a circular divan; in the centre was a table provided with a swinging lamp.</p>
+              <p class="ma-0">Phileas Fogg and Aouda went on board, where they found Fix already installed. Below deck was a square cabin, of which the walls bulged out in the form of cots, above a circular divan; in the centre was a table provided with a swinging lamp.</p>
+              <p class="ma-0">Phileas Fogg and Aouda went on board, where they found Fix already installed. Below deck was a square cabin, of which the walls bulged out in the form of cots, above a circular divan; in the centre was a table provided with a swinging lamp.</p>
             </mat-card-content>
+            <hr>
+            <mat-card-actions>
+             backkkkkkk
+            </mat-card-actions>
           </mat-card>
-
         </div>
       </div>
-    </mat-card>
+    </div>
   </div>
   <div fxFlex.gt-sm="33.33%" fxFlex.gt-xs="50" fxFlex="100">
-    <mat-card>
-      <mat-card-subtitle fxLayout="row" fxLayoutAlign="start center">
-        Yearly Sales &nbsp; <span class="font-weight-bold mat-text-warn">-46,68</span>
-        <span fxFlex></span>
-        <button mat-icon-button mat-button-sm [matMenuTriggerFor]="card2" aria-label="Open card menu">
-          <mat-icon>more_vert</mat-icon>
-        </button>
-      </mat-card-subtitle>
-      <mat-menu #card2="matMenu" x-position="before">
-        <button mat-menu-item>
-          <mat-icon>settings</mat-icon>
-          Settings
-        </button>
-        <button mat-menu-item>
-          <mat-icon>more</mat-icon>
-          View More
-        </button>
-        <button mat-menu-item>
-          <mat-icon>notifications_off</mat-icon>
-          Disable notifications
-        </button>
-        <button mat-menu-item>
-          <mat-icon>exit_to_app</mat-icon>
-          Remove Panel
-        </button>
-      </mat-menu>
-      <mat-card-content>
-        <canvas height="200" baseChart class="chart"
-                [datasets]="ComboChartData"
-                [labels]="comboChartLabels"
-                [options]="ComboChartOptions"
-                [colors]="chartColors"
-                [legend]="comboChartLegend"
-                [chartType]="barChartType"></canvas>
-      </mat-card-content>
-    </mat-card>
+    <div class="card_scene card bg-dark" (click)="flip(1)">
+      <div class="flipcard" #flipcard>
+        <div class="card__face card__face--front">
+          <div class="card border-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header -1</div>
+            <div class="card-body text-primary">
+              <h5 class="card-title">Primary card title-FF</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card__face-back card__face--back">
+          <div class="card border-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header -1 - B</div>
+            <div class="card-body text-primary">
+              <h5 class="card-title">Primary card title BB</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
   <div fxFlex.gt-sm="33.33%" fxFlex.gt-xs="50" fxFlex="100">
-    <mat-card>
-      <mat-card-subtitle fxLayout="row" fxLayoutAlign="start center">
-        Sales Report &nbsp; <span class="font-weight-bold mat-text-accent">+2,50%</span>
-        <span fxFlex></span>
-        <button mat-icon-button mat-button-sm [matMenuTriggerFor]="card3" aria-label="Open card menu">
-          <mat-icon>more_vert</mat-icon>
-        </button>
-      </mat-card-subtitle>
-      <mat-menu #card3="matMenu" x-position="before">
-        <button mat-menu-item>
-          <mat-icon>settings</mat-icon>
-          Settings
-        </button>
-        <button mat-menu-item>
-          <mat-icon>more</mat-icon>
-          View More
-        </button>
-        <button mat-menu-item>
-          <mat-icon>notifications_off</mat-icon>
-          Disable notifications
-        </button>
-        <button mat-menu-item>
-          <mat-icon>exit_to_app</mat-icon>
-          Remove Panel
-        </button>
-      </mat-menu>
-      <mat-card-content>
-        <canvas height="200" baseChart class="chart"
-                [datasets]="bubbleChartData"
-                [labels]="comboChartLabels"
-                [options]="ComboChartOptions"
-                [legend]="comboChartLegend"
-                [chartType]="bubbleChartType"></canvas>
-      </mat-card-content>
-    </mat-card>
+    <div class="card_scene card bg-dark" (click)="flip(2)">
+      <div class="flipcard" #flipcard>
+        <div class="card__face card__face--front">
+          <div class="card border-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header -1</div>
+            <div class="card-body text-primary">
+              <h5 class="card-title">Primary card title-FF</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card__face-back card__face--back">
+          <div class="card border-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header -1 - B</div>
+            <div class="card-body text-primary">
+              <h5 class="card-title">Primary card title BB</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-
-<div fxLayout="row wrap">
-  <div fxFlex.gt-sm="100%" fxFlex="100">
-    <ngx-datatable
-      class="material"
-      [rows]="rows"
-      [columnMode]="'force'"
-      [headerHeight]="50"
-      [footerHeight]="0"
-      [rowHeight]="'auto'">
-      <ngx-datatable-column name="Project">
-        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
-          {{row['project']}}
-        </ng-template>
-      </ngx-datatable-column>
-      <ngx-datatable-column name="Due Date">
-        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
-          {{row['date'] | date: 'MMMM dd'}}
-        </ng-template>
-      </ngx-datatable-column>
-      <ngx-datatable-column name="Progress">
-        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
-          <mat-progress-bar mode="determinate" value="{{row['progress']}}" color="primary"></mat-progress-bar>
-        </ng-template>
-      </ngx-datatable-column>
-    </ngx-datatable>
-  </div>
-</div>
-

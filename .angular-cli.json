@@ -23,7 +23,8 @@
         "../node_modules/@swimlane/ngx-datatable/release/themes/material.css",
         "assets/fonts/pe/css/pe-icon-set-weather.css",
         "assets/fonts/data-table/icons.css",
-        "assets/styles/app.scss"
+        "assets/styles/app.scss",
+        "../node_modules/bootstrap/dist/css/bootstrap.css"
       ],
       "scripts": [
         "../node_modules/hammerjs/hammer.min.js",

@@ -10,6 +10,7 @@ export class DashboardComponent {
   card1;
   card2;
   card3;
+  imgID: any = ["id936315116","id680917092","id173501312", "id936315116"];
 
   rows = [];
 
@@ -197,9 +198,13 @@ export class DashboardComponent {
     req.send();
   }
   flipTheSpace() {
-    console.log(this.cardFace.toArray()[0].nativeElement);
-    this.flipcard.toArray()[0].nativeElement.classList.toggle('is-flipped');
+    // console.log(this.cardFace.toArray()[0].nativeElement);
+    this.flipcard.toArray()[0].nativeElement.classList.toggle('flipped');
     // this.renderer.setStyle(this.cardFace.toArray()[0].nativeElement, 'position', 'absolute');
     // this.cardFace.toArray()[0].nativeElement.classList.toggle('is-flipped');
+  }
+  flip(i) {
+    console.log(this.flipcard.toArray()[i].nativeElement.classList);
+    (this.flipcard.toArray()[i].nativeElement.classList.toggle('is-flipped'));
   }
 }
