@@ -66,6 +66,7 @@ export class AdminLayoutComponent implements OnInit, OnDestroy {
   }
 
   receiveOptions($event): void {
+    console.log($event);
     this.options = $event;
   }
 

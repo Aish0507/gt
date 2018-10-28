@@ -47,7 +47,7 @@ import {
 import { AppRoutes } from './app.routing';
 import { AppComponent } from './app.component';
 import {LoaderService} from "./services/loader.service";
-
+import {HighchartsService} from "./services/highcharts.service";
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -101,14 +101,14 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MatProgressBarModule,
     FlexLayoutModule,
     BidiModule,
-    PerfectScrollbarModule
-  ],
+    PerfectScrollbarModule],
   providers: [
     {
       provide: PERFECT_SCROLLBAR_CONFIG,
       useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
     },
-    LoaderService
+    LoaderService,
+    HighchartsService
   ],
   bootstrap: [AppComponent]
 })

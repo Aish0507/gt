@@ -10,6 +10,10 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { DashboardComponent } from './dashboard.component';
 import { DashboardRoutes } from './dashboard.routing';
 
+import {TreeviewModule} from "../../../lib";
+import {FormsModule} from "@angular/forms";
+import { TestChartComponent } from './test-chart/test-chart.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -22,9 +26,11 @@ import { DashboardRoutes } from './dashboard.routing';
     MatMenuModule,
     ChartsModule,
     NgxDatatableModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    FormsModule,
+    TreeviewModule.forRoot()
   ],
-  declarations: [ DashboardComponent ]
+  declarations: [ DashboardComponent, TestChartComponent ]
 })
 
 export class DashboardModule {}
